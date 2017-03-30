@@ -33,7 +33,7 @@ public class FileServiceHandler implements FileService {
 	public String getCountForWords(List<String> inputList) {
 		LOG.debug("input List:"+inputList);
 		if(inputList == null || inputList.isEmpty())
-			return null;
+			return new Gson().toJson("invalid data");
 		Map<String, Integer> countByWords = new HashMap<String, Integer>();
 		
 		inputList.forEach(str -> {
