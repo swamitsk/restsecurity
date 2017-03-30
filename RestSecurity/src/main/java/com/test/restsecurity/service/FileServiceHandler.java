@@ -32,7 +32,7 @@ public class FileServiceHandler implements FileService {
 	@Override
 	public String getCountForWords(List<String> inputList) {
 		LOG.debug("input List:"+inputList);
-		if(inputList.isEmpty())
+		if(inputList == null || inputList.isEmpty())
 			return null;
 		Map<String, Integer> countByWords = new HashMap<String, Integer>();
 		
